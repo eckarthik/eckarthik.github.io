@@ -46,10 +46,22 @@ $(document).ready(function() {
 });
 </script>
 <style>
+@media screen and (max-width: 767px) {
+    .backgroundimg {
+        height:200px;
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+     .backgroundimg {
+        height:400px;
+    }
+    
 
+}
 </style>
 <body>
-<div class="img-responsive" style="background-image:url('wooden-desk.jpg');background-repeat:no-repeat;background-position: left;background-size:100% 100%">
+<div class="backgroundimg" style="background-image:url('wooden-desk.jpg');background-repeat:no-repeat;background-position: left;background-size:100% 100%">
 <div class="row" style="background-color:rgba(0,0,0,0.5);overflow-x:hidden;margin-bottom:0;border-radius:0px;height:700px;">
     <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <h1 style="color:white;font-family: Lato; font-size:9vw" class="text-center">HELLO</h1>
