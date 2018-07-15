@@ -46,7 +46,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var y_scroll_pos = window.scrollY;
         var elepos = element_position;
-        if(y_scroll_pos>=(elepos*0.6))
+        if(y_scroll_pos>=(elepos*0.5))
         {
             $("div.skill-item").css("visibility","visible");
             var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%"}
@@ -190,6 +190,13 @@ div.skill-item {
 </div>
 <br />
 </div>
-
+<div class="jumbotron" style="background:#181A1A;padding-left:120px;margin-bottom:0;border-radius:0;" id="contact">
+    <h1 class="beintouch" style="color: white;">Be in Touch!</h1>
+     <a target="_blank" href="http://instagram.com/eckarthik"><img class="socicons" src="socicons/instagram.png" alt="Instagram"/></a>
+     <a target="_blank" href="http://facebook.com/karthik.raju.5682"><img class="socicons" src="socicons/facebook.png" alt="Facebook"/></a>
+     <a target="_blank" href="http://twitter.com/K4RTH1K"><img class="socicons" src="socicons/twitter.png" alt="Twitter"/></a>
+     <a target="_blank" href="http://linkedin.com"><img class="socicons" src="socicons/linkedin.png" alt="LinkedIn"/></a>
+     
+</div>
 </body>
 </html>
