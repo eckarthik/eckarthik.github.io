@@ -31,7 +31,7 @@ var i=0;
     
 $(document).ready(function() {
     greeting();
-    $(window).scroll(function() {
+    $(window).on('scroll',function() {
         //$("div.hover").animate({height:'400px',background:'green',width:'100%'});
         if ($(document).scrollTop() >= 3) {
             $("div.hover").animate({height:'200px',width:'100%'});
@@ -42,7 +42,26 @@ $(document).ready(function() {
               $("div.hover").css("background","red");
             }
     });
-    $("div.skills").hover(function() {
+    var element_position = $("div.skills").offset().top;
+    $(window).scroll(function() {
+        var y_scroll_pos = window.scrollY;
+        var elepos = element_position;
+        if(y_scroll_pos>=(elepos*0.6))
+        {
+            $("div.skill-item").css("visibility","visible");
+            var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%"}
+            for(x in skills)
+            {
+                var classname = "div.progress-bar-skill-"+x;
+                if($(classname).css("width")=="0px")
+                {
+                    $(classname).animate({width:skills[x]});
+                    $(classname).css("width",skills[x]);
+                }
+            }
+        }
+    });
+    /*$("div.skills").hover(function() {
         $("div.skill-item").css("visibility","visible");
         var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%"}
         for(x in skills)
@@ -54,14 +73,8 @@ $(document).ready(function() {
                 $(classname).css("width",skills[x]);
             }
         }
-       
-        /*if($("div.progress-bar").css("width")=="0px")
-            {
-                $("div.progress-bar").animate({width:"70%"});
-                $("div.progress-bar").css("width","70%");
-            }*/
         
-    })
+    });*/
         
 });
 </script>
@@ -177,5 +190,6 @@ div.skill-item {
 </div>
 <br />
 </div>
+
 </body>
 </html>
