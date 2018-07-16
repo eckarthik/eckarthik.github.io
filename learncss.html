@@ -26,24 +26,9 @@ var i=0;
             i++;
             setTimeout(greeting,250);
         }
-    }
-    
-    
-    
-    
+    }   
 $(document).ready(function() {
     greeting();
-    $(window).on('scroll',function() {
-        //$("div.hover").animate({height:'400px',background:'green',width:'100%'});
-        if ($(document).scrollTop() >= 3) {
-            $("div.hover").animate({height:'200px',width:'100%'});
-            $("div.hover").css("background","green");
-            } 
-        else {
-              $("div.hover").animate({height:'200px',background:'green',width:'100%'});
-              $("div.hover").css("background","red");
-            }
-    });
     var element_position = $("div.skills").offset().top;
     $(window).scroll(function() {
         var y_scroll_pos = window.scrollY;
@@ -62,22 +47,7 @@ $(document).ready(function() {
                 }
             }
         }
-    });
-    /*$("div.skills").hover(function() {
-        $("div.skill-item").css("visibility","visible");
-        var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%"}
-        for(x in skills)
-        {
-            var classname = "div.progress-bar-skill-"+x;
-            if($(classname).css("width")=="0px")
-            {
-                $(classname).animate({width:skills[x]});
-                $(classname).css("width",skills[x]);
-            }
-        }
-        
-    });*/
-        
+    });     
 });
 </script>
 <style>
@@ -219,65 +189,65 @@ div.skill-item {
 
 
 <div class="row" style="margin:0;">
-<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="background: #18BC9C;text-align: center;">
-<div style="font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
-<div class="container" style="font-family: Lato;font-weight:70;font-size: 20px;color:white;text-align:justify;padding-bottom:20px;">
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-</div>
-</div>
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="background: #18BC9C;text-align: center;">
+        <div style="font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
+        <div class="container" style="font-family: Lato;font-weight:70;font-size: 20px;color:white;text-align:justify;padding-bottom:20px;">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </div>
+    </div>
 </div>
 
 <div class="skills" style="padding-bottom: 30px;margin:auto;">
-<div class="container">
-<div class="row" style="margin:0;">
-<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="text-align: center;background:white;">
-<div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">SKILLS</span></div>
-<div class="skill-item">
-<div class="skill-title">PHP</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-php"></div>
-</div>
-</div>
-<br />
-<div class="skill-item">
-<div class="skill-title">HTML</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-html"></div>
-</div>
-</div>
-<br />
-<div class="skill-item">
-<div class="skill-title">JavaScript</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-javascript"></div>
-</div>
-</div>
-<br />
-<div class="skill-item">
-<div class="skill-title">C</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-c"></div>
-</div>
-</div>
-<br />
-<div class="skill-item">
-<div class="skill-title">C++</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-cplusplus"></div>
-</div>
-</div>
-<br />
-<div class="skill-item">
-<div class="skill-title">JAVA</div>
-<div class="progress">
-    <div class="progress-bar bg-success progress-bar-skill-java"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row" style="margin:0;">
+            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="text-align: center;background:white;">
+                <div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">SKILLS</span></div>
+                <div class="skill-item">
+                    <div class="skill-title">PHP</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-php"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="skill-item">
+                    <div class="skill-title">HTML</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-html"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="skill-item">
+                    <div class="skill-title">JavaScript</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-javascript"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="skill-item">
+                    <div class="skill-title">C</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-c"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="skill-item">
+                    <div class="skill-title">C++</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-cplusplus"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="skill-item">
+                    <div class="skill-title">JAVA</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-java"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="android-apps">
     <div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">MY ANDROID APPS</span></div>
@@ -308,6 +278,6 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 </div>
 <div class="footer" >
     <p align="right" style="color:white;padding-right:40px;margin-bottom:0;">Google Play and the Google Play logo are trademarks of Google LLC.</p>
-    </div>
+</div>
 </body>
 </html>
