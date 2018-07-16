@@ -6,11 +6,12 @@
 	<meta name="author" content="Karthik E C" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bs/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
 	<title>Karthik E C</title>
 </head>
@@ -29,6 +30,7 @@ var i=0;
     }   
 $(document).ready(function() {
     greeting();
+    //Skills section transition effect code starts
     var element_position = $("div.skills").offset().top;
     $(window).scroll(function() {
         var y_scroll_pos = window.scrollY;
@@ -47,7 +49,50 @@ $(document).ready(function() {
                 }
             }
         }
-    });     
+    }); 
+    //Skills section transition effect code ends
+    /*
+    var element_position = $("div.about").offset().top;
+    //$("div.aboutme-content").hide();
+    $(window).scroll(function() {
+        var y_scroll_pos = window.scrollY;
+        var elepos = element_position;
+        if(y_scroll_pos>=(elepos*0.5))
+        {
+            $("div.aboutme-content").fadeIn(5000);
+            $("div.aboutme-content").show();
+            $("div.aboutme-content").css("visibility","visible");
+        }
+    }); 
+    */
+    /*
+    var element_position = $("div.about").offset().top;
+    $(window).scroll(function() {
+        var y_scroll_pos = window.scrollY;
+        var elepos = element_position;
+        if(y_scroll_pos>=(elepos*0.5))
+        {
+            $("div.aboutme-content").addClass("animated fadeInUp");
+            $("div.aboutme-content").css("visibility","visible");
+        }
+    }); 
+    */
+    
+    var elements = {divAboutmeheading:"div.aboutme-heading",divAboutmeContent:"div.aboutme-content",divSkills:"div.skills",divMyworkContents:"div.mywork-contents"};
+    $(window).scroll(function() {
+        var y_scroll_pos = window.scrollY;
+        for(x in elements)
+        {
+            //alert(elements[x]);
+            var elepos = $(elements[x]).offset().top;
+            if(y_scroll_pos>=(elepos*0.5))
+            {
+                $(elements[x]).addClass("animated fadeInUp");
+                $(elements[x]).css("visibility","visible");
+            }
+        }
+        
+    }); 
 });
 </script>
 <style>
@@ -94,6 +139,17 @@ div.skill-item {
     padding-top:20px;
     padding-bottom:20px;
     margin:0;
+}
+.mywork {
+    background-image: url('designer_desk_top.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin:auto;
+    font-size:75px;
+    text-align:center;
 }
 @media screen and (max-width: 767px) {
     .backgroundimg {
@@ -175,7 +231,7 @@ div.skill-item {
     </ul>
   </div>
 </nav>
-<div class="backgroundimg" style="background-image:url('wooden_desk.jpg');background-repeat:no-repeat;background-position: left;background-size:100% 100%;">
+<div class="backgroundimg" style="background-image:url('wooden_desk.jpg');background-repeat:no-repeat;background-position: left;background-size:100% 100%;background-attachment:fixed;">
 <div class="row" style="background-color:rgba(0,0,0,0.4);overflow-x:hidden;margin-bottom:0;border-radius:0px;height:inherit;margin:0;">
     <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <h1 style="color:white;font-family: Lato;padding-top:50px;font-size:8vw;" class="text-center text-hello">HELLO</h1>
@@ -188,10 +244,10 @@ div.skill-item {
 </div>
 
 
-<div class="row" style="margin:0;">
+<div class="row about" style="margin:0;">
     <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="background: #18BC9C;text-align: center;">
-        <div style="font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
-        <div class="container" style="font-family: Lato;font-weight:70;font-size: 20px;color:white;text-align:justify;padding-bottom:20px;">
+        <div class="aboutme-heading" style="visibility:hidden;font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
+        <div class="container aboutme-content" style="visibility:hidden;font-family: Lato;font-weight:70;font-size: 20px;color:white;text-align:justify;padding-bottom:20px;">
         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
         
         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
@@ -199,7 +255,7 @@ div.skill-item {
     </div>
 </div>
 
-<div class="skills" style="padding-bottom: 30px;margin:auto;">
+<div class="skills" style="visibility:hidden;padding-bottom: 30px;margin:auto;">
     <div class="container">
         <div class="row" style="margin:0;">
             <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="text-align: center;background:white;">
@@ -265,6 +321,14 @@ div.skill-item {
                 <div class="app-description">A simple application that allows you to take quick notes</div>
                 <div class="app-playstorelink"><a href='https://play.google.com/store/apps/details?id=app.easynotes.notes&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style="margin:auto;display:block;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="250" height="100"/></a></div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="mywork">
+    <div class="row" style="background-color: rgba(0,0,0,0.4);">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mywork-contents" style="visibility: hidden;">
+            <p style="color: white;">See my work!</p>
+            <a href="http://github.com/eckarthik39" target="_blank" style="color:white;">Github</a>
         </div>
     </div>
 </div>
