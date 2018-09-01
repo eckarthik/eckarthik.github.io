@@ -17,7 +17,7 @@
 </head>
 <script>
 var i=0;
-    words = "Student | Web Developer | Filmophile ";
+    words = "Cinema | Cricket | Coding ";
     
     function greeting()
     {
@@ -38,7 +38,7 @@ $(document).ready(function() {
         if(y_scroll_pos>=(elepos*0.5))
         {
             $("div.skill-item").css("visibility","visible");
-            var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%"}
+            var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%",python:"70%"}
             for(x in skills)
             {
                 var classname = "div.progress-bar-skill-"+x;
@@ -109,8 +109,8 @@ div.skill-item {
 }
 .socicons {
     margin-right: 15px;
-    width:50px;
-    height:50px;
+    width:40px;
+    height:40px;
 }
 .progress {
     height:25px;
@@ -179,6 +179,21 @@ div.skill-item {
     .biobackgroundimgtwo {
         z-index:1;
     }
+    .mywork {
+    background-image: url('designer_desk_top.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin:auto;
+    font-size:45px;
+    text-align:center;
+    }
+    .rounded-circle {
+        width:350px;
+        height:350px;
+    }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -207,6 +222,21 @@ div.skill-item {
     .biobackgroundimgtwo {
         z-index:1;
     }
+    .mywork {
+    background-image: url('designer_desk_top.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin:auto;
+    font-size:45px;
+    text-align:center;
+    }
+    .rounded-circle {
+        width:350px;
+        height:350px;
+    }
 
     
 }
@@ -215,6 +245,13 @@ div.skill-item {
     .skills {
         width:600px;
     }
+    .rounded-circle {
+        width:400px;
+        height:400px;
+        margin:auto;
+        display:block;
+        padding-left: 20px;
+    }
     
 }
 /* large desktops and up ----------- */
@@ -222,10 +259,20 @@ div.skill-item {
     .skills {
         width:600px;
     }
+    .rounded-circle {
+        width:500px;
+        height:500px;
+    }
 }
 @media (hover: none) {
    div.skill-item {
     visibility:visible;
+    }
+    .rounded-circle {
+        width:300px;
+        height:300px;
+        margin:auto;
+        display:block;
     }
 }
 </style>
@@ -269,10 +316,8 @@ div.skill-item {
 <div class="row about" style="margin:0;">
     <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="background: #18BC9C;text-align: center;">
         <div class="aboutme-heading" style="visibility:hidden;font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
-        <div class="container aboutme-content" style="visibility:hidden;font-family: Lato;font-weight:70;font-size: 20px;color:white;text-align:justify;padding-bottom:20px;">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        <div class="container aboutme-content" style="visibility:hidden;font-family: Lato;font-weight:70;font-size: 25px;color:white;text-align:justify;padding-bottom:20px;">
+        Hi there! I am Karthik E C, from Bengaluru,India, interested in mobile and web development. I am passionate about building excellent software that improves the lives of those around me and I love automating things.
         </div>
     </div>
 </div>
@@ -282,6 +327,13 @@ div.skill-item {
         <div class="row" style="margin:0;">
             <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="text-align: center;background:white;">
                 <div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">SKILLS</span></div>
+                 <div class="skill-item">
+                    <div class="skill-title">PYTHON</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-skill-python"></div>
+                    </div>
+                </div>
+                <br />
                 <div class="skill-item">
                     <div class="skill-title">PHP</div>
                     <div class="progress">
@@ -350,10 +402,10 @@ div.skill-item {
 <div class="container-fluid">
     <div style="font-weight: 500; color:#FE0101; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="font-size:35px;">MEET MY CHATBOT </span></div>
     <div class="row">
-        <div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
-            <img class="rounded-circle" src="chatbot.jpg" width="400" height="400" style="padding-bottom: 20px;"/>
+        <div class="col-sm-12 col-md-5">
+            <img class="rounded-circle" src="chatbot.jpg" style="padding-bottom: 20px;"/>
         </div>
-        <div class="col-lg-8 col-xs-8 col-sm-8 col-md-8" style="font-size:25px;font-weight: 500;font-family:Lato;">
+        <div class="col-sm-12 col-md-7" style="font-size:25px;font-weight: 500;font-family:Lato;">
             Made a chat bot by using Dialogflow API and integrated it with Telegram bot API. Features:- 
             <ul>
                 <li>Basic greetings</li>
@@ -367,21 +419,17 @@ div.skill-item {
         </div>
     </div>
 </div>
-<div class="mywork">
+<!--<div class="mywork">
     <div class="row" style="background-color: rgba(0,0,0,0.4);margin:0;">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mywork-contents" style="visibility: hidden;padding-bottom:40px;">
-            <p style="color: white;padding-top:40px;font-family:Lato;">See my work!</p>
-            <a href="http://github.com/eckarthik39" target="_blank" style="color:white;font-family:Lato;">Github</a>
-        </div>
+        See my Work
     </div>
-</div>
+</div>-->
 <div class="jumbotron" style="background:#181A1A;padding-left:70px;margin-bottom:0;border-radius:0;" id="contact">
-    <h1 class="beintouch" style="color: white;font-family:Lato;font-size:45px;">Be in Touch!</h1>
-     <a target="_blank" href="http://instagram.com/eckarthik"><img class="socicons" src="socicons/instagram.png" alt="Instagram"/></a>
+    <h1 class="beintouch" style="color: white;font-family:Lato;font-size:45px;">Find me here!</h1>
      <a target="_blank" href="http://facebook.com/eckarthikec"><img class="socicons" src="socicons/facebook.png" alt="Facebook"/></a>
      <a target="_blank" href="http://twitter.com/eckarthik"><img class="socicons" src="socicons/twitter.png" alt="Twitter"/></a>
      <a target="_blank" href="https://www.linkedin.com/in/karthik-e-c-0207476a/"><img class="socicons" src="socicons/linkedin.png" alt="LinkedIn"/></a>
-     
+     <a target="_blank" href="https://www.github.com/eckarthik"><img class="socicons" src="https://png.icons8.com/windows/100/ffffff/github.png" alt="Github"/></a>
 </div>
 <div class="footer" >
     <p align="right" style="color:white;padding-right:40px;margin-bottom:0;">Google Play and the Google Play logo are trademarks of Google LLC.</p>
