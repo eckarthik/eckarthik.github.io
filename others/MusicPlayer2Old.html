@@ -25,16 +25,12 @@
     <style>
         .music-player {
             max-width:350px;
-            height:500px;
+            height:600px;
         }
         .album-cover {
-            background-color: white;
-            border: none;
-            margin: 0;
-        }
-        .album-cover-image {
-            width:90%;
-            height:50%;
+            width:100%;
+            height:325px;
+            object-fit: fill;
         }
         .song-details {
             font-family: 'Roboto', Arial, Verdana, sans-serif;
@@ -85,9 +81,16 @@
     </style>
     <body style="background:#e4f2fb;width: auto;height: auto;">  
         <div class="card music-player mx-auto">
-            <div class="card-body pt-0">
-                <div class="card-title album-cover pt-3 text-center m-0">
-                    <img class="rounded album-cover-image" src="https://miro.medium.com/max/719/1*lKQHFB3b_bxN3lLhIm-RJw.jpeg"/>
+            <div class="card-header p-0">
+                <img class="rounded album-cover" src="https://miro.medium.com/max/719/1*lKQHFB3b_bxN3lLhIm-RJw.jpeg"/>
+            </div>
+            <div class="card-body">
+                <div class="song-progress">
+                    <span class="current-song-duration pr-2">3:26</span>
+                    <span class="progress w-100 mt-2" style="height: 10px;">
+                        <span class="progress-bar bg-danger" style="width:70%;"></span>
+                    </span> 
+                    <span class="total-song-duration pl-2">4:35</span>
                 </div>
                 <div class="song-details mt-2 text-center">
                     <div class="song-name">
@@ -99,27 +102,6 @@
                     <div class="singer-name">
                         <h6>Hariharan</h6>
                     </div>
-                </div>
-                <!-- <div class="song-details mt-2 ml-3">
-                    <div class="song-name" style="display: flex;">
-                        <div class="icon mt-1 mr-2"><i class="fas fa-music"></i></div>
-                        <div class="song-detail-text">Ay Pilla</div>
-                    </div>
-                    <div class="album-name" style="display: flex;">
-                        <div class="icon mt-1 mr-2"><i class="fas fa-user"></i></div>
-                        <div class="song-detail-text">Hariharan</div>
-                    </div>
-                    <div class="singer-name" style="display: flex;">
-                        <div class="icon mt-1 mr-2"><i class="fas fa-compact-disc"></i></div>
-                        <div class="song-detail-text">Love Story</div>
-                    </div>
-                </div> -->
-                <div class="song-progress">
-                    <span class="current-song-duration pr-2">3:26</span>
-                    <span class="progress w-100 mt-2" style="height: 10px;">
-                        <span class="progress-bar bg-danger" style="width:70%;"></span>
-                    </span> 
-                    <span class="total-song-duration pl-2">4:35</span>
                 </div>
                 <ul class="song-controls mt-3">
                     <li>
@@ -137,6 +119,7 @@
                             <i class='fas fas fa-step-forward'></i>
                         </button>
                     </li>
+                 
                 </ul>
                 <ul class="additional-song-controls mt-4">
                     <li>
