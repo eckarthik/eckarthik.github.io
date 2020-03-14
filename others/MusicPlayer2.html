@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>
+            Music Player
+        </title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .music-player {
+            max-width:350px;
+            height:600px;
+        }
+        .album-cover {
+            width:100%;
+            height:325px;
+            object-fit: fill;
+        }
+        .song-details {
+            font-family: 'Roboto', Arial, Verdana, sans-serif;
+        }
+        .song-controls {
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            display: flex;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .song-control-big {
+            border-radius: 5rem;
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-top: .52rem;
+            padding-right: 1.0rem;
+            padding-bottom: .52rem;
+            padding-left: 1.2rem;
+            font-size:32px;
+        }
+        .song-control-small {
+            border-radius: 5rem;
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-top: .62rem;
+            padding-right: 0.7rem;
+            padding-bottom: .62rem;
+            padding-left: 0.7rem;
+            font-size: 14px;
+        }
+        .additional-song-controls {
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            display: flex;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .additional-song-control {
+            color:gray;
+        }
+        .song-progress {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+    <body style="background:#e4f2fb;width: auto;height: auto;">  
+        <div class="card music-player mx-auto">
+            <div class="card-header p-0">
+                <img class="rounded album-cover" src="https://miro.medium.com/max/719/1*lKQHFB3b_bxN3lLhIm-RJw.jpeg"/>
+            </div>
+            <div class="card-body">
+                <div class="song-progress">
+                    <span class="current-song-duration pr-2">3:26</span>
+                    <span class="progress w-100 mt-2" style="height: 10px;">
+                        <span class="progress-bar bg-danger" style="width:70%;"></span>
+                    </span> 
+                    <span class="total-song-duration pl-2">4:35</span>
+                </div>
+                <div class="song-details mt-2 text-center">
+                    <div class="song-name">
+                        <h6>Ay Pilla</h6>
+                    </div>
+                    <div class="album-name">
+                        <h5 style="color:#d30320;font-weight: 400;">Love Story</h5>
+                    </div>
+                    <div class="singer-name">
+                        <h6>Hariharan</h6>
+                    </div>
+                </div>
+                <ul class="song-controls mt-3">
+                    <li>
+                        <button class="btn song-control-small mr-4">
+                            <i class='fas fas fa-step-backward'></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn song-control-big mr-4">
+                            <i class='fas fa-caret-right' style='color:red'></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn song-control-small">
+                            <i class='fas fas fa-step-forward'></i>
+                        </button>
+                    </li>
+                 
+                </ul>
+                <ul class="additional-song-controls mt-4">
+                    <li>
+                        <button class="btn additional-song-control mr-5">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn additional-song-control mr-5">
+                            <i class='fas fa-random'></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn additional-song-control mr-5">
+                            <i class='fa fa-repeat'></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn additional-song-control">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                </div>
+        </div>
+    </body>
+</html>
