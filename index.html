@@ -1,438 +1,196 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+    <head>
+        <title>
+            Karthik E C - Portfolio
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-	<meta name="author" content="Karthik E C" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bs/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
-	<title>Karthik E C</title>
-</head>
-<script>
-var i=0;
-    words = "Cinema | Cricket | Coding ";
-    
-    function greeting()
-    {
-        if(i<words.length)
-        {
-            document.getElementById('writer').innerHTML+=words.charAt(i);
-            i++;
-            setTimeout(greeting,250);
-        }
-    }   
-$(document).ready(function() {
-    greeting();
-    //Skills section transition effect code starts
-    var element_position = $("div.skills").offset().top;
-    $(window).scroll(function() {
-        var y_scroll_pos = window.scrollY;
-        var elepos = element_position;
-        if(y_scroll_pos>=(elepos*0.5))
-        {
-            $("div.skill-item").css("visibility","visible");
-            var skills = {php:"60%",html:"70%",javascript:"50%",c:"70%",cplusplus:"60%",java:"60%",python:"70%"}
-            for(x in skills)
-            {
-                var classname = "div.progress-bar-skill-"+x;
-                if($(classname).css("width")=="0px")
-                {
-                    $(classname).animate({width:skills[x]});
-                    $(classname).css("width",skills[x]);
-                }
-            }
-        }
-    }); 
-    //Skills section transition effect code ends
-    /*
-    var element_position = $("div.about").offset().top;
-    //$("div.aboutme-content").hide();
-    $(window).scroll(function() {
-        var y_scroll_pos = window.scrollY;
-        var elepos = element_position;
-        if(y_scroll_pos>=(elepos*0.5))
-        {
-            $("div.aboutme-content").fadeIn(5000);
-            $("div.aboutme-content").show();
-            $("div.aboutme-content").css("visibility","visible");
-        }
-    }); 
-    */
-    /*
-    var element_position = $("div.about").offset().top;
-    $(window).scroll(function() {
-        var y_scroll_pos = window.scrollY;
-        var elepos = element_position;
-        if(y_scroll_pos>=(elepos*0.5))
-        {
-            $("div.aboutme-content").addClass("animated fadeInUp");
-            $("div.aboutme-content").css("visibility","visible");
-        }
-    }); 
-    */
-    
-    var elements = {divAboutmeheading:"div.aboutme-heading",divAboutmeContent:"div.aboutme-content",divSkills:"div.skills",divMyworkContents:"div.mywork-contents"};
-    $(window).scroll(function() {
-        var y_scroll_pos = window.scrollY;
-        for(x in elements)
-        {
-            //alert(elements[x]);
-            var elepos = $(elements[x]).offset().top;
-            console.log(elepos);
-            if(y_scroll_pos>=(elepos*0.5))
-            {
-                $(elements[x]).addClass("animated fadeInUp");
-                $(elements[x]).css("visibility","visible");
-            }
-        }
-        
-    }); 
-});
-</script>
-<style>
-div.skill-item {
-    visibility:hidden;
-}
-.skill-item {
-    text-align:left;
-}
-.skill-title {
-    font-size:20px;
-    font-family:Lato;
-}
-.socicons {
-    margin-right: 15px;
-    width:40px;
-    height:40px;
-}
-.progress {
-    height:25px;
-}
-.app-title {
-    font-size:30px;
-    font-weight:800;
-    font-family:Lato;
-    color:black;
-    text-align:center;
-}
-.app-description {
-    font-size:25px;
-    font-weight: 500;
-    font-family:Lato;
-    color:black;
-    text-align:justify;
-}
-.footer {
-    background:black;
-    width:100%;
-    height:60px;
-    margin-right:-15px;
-}
-.android-apps {
-    background:yellow;
-    padding-top:20px;
-    padding-bottom:20px;
-    margin:0;
-}
-.mywork {
-    background-image: url('designer_desk_top.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    margin:auto;
-    font-size:60px;
-    text-align:center;
-}
-
-@media screen and (max-width: 767px) {
-    .backgroundimg {
-        height:270px;
-    }
-    div.skill-item {
-    visibility:visible;
-    }
-    .socicons {
-        margin-right: 15px;
-        margin-bottom: 10px;
-        width:50px;
-        height:50px;
-    }
-    .skills {
-        width:300px;
-    }
-    .biobackgroundimg {
-    background-image:url('wooden_desk.jpg');
-    position:relative;
-    z-index:-1;
-    width:100%;
-    height:100%;
-    }
-    .biobackgroundimgtwo {
-        z-index:1;
-    }
-    .mywork {
-    background-image: url('designer_desk_top.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    margin:auto;
-    font-size:45px;
-    text-align:center;
-    }
-    .rounded-circle {
-        width:350px;
-        height:350px;
-    }
-}
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
-     .backgroundimg {
-        height:400px;
-    }
-    div.skill-item {
-    visibility:visible;
-    }
-    .socicons {
-        margin-right: 15px;
-        margin-bottom: 10px;
-        width:50px;
-        height:50px;
-    }
-    .skills {
-        width:500px;
-    }
-    .biobackgroundimg {
-    z-index:-1;
-    background-image:url('wooden_desk.jpg');
-    position:relative;
-    width:100%;
-    height:100%;
-    }
-    .biobackgroundimgtwo {
-        z-index:1;
-    }
-    .mywork {
-    background-image: url('designer_desk_top.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    margin:auto;
-    font-size:45px;
-    text-align:center;
-    }
-    .rounded-circle {
-        width:350px;
-        height:350px;
-    }
-
-    
-}
-/* tablets/desktops and up ----------- */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .skills {
-        width:600px;
-    }
-    .rounded-circle {
-        width:400px;
-        height:400px;
-        margin:auto;
-        display:block;
-        padding-left: 20px;
-    }
-    
-}
-/* large desktops and up ----------- */
-@media screen and (min-width: 1200px) {
-    .skills {
-        width:600px;
-    }
-    .rounded-circle {
-        width:500px;
-        height:500px;
-    }
-}
-@media (hover: none) {
-   div.skill-item {
-    visibility:visible;
-    }
-    .rounded-circle {
-        width:300px;
-        height:300px;
-        margin:auto;
-        display:block;
-    }
-}
-</style>
-<body>
-<nav class="navbar navbar-toggleable-sm navbar-toggleable-sm navbar-light navbar-expand-lg" style="background:white;">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding: 0px;margin-right:0;">
-    <ul class="navbar-nav" style="padding: 0px;">
-        <hr style="background: #454343; height:0.5px;"/> <!--Creates a HR when toggle is present-->
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:20px;color:#060202;font-family:Lato;font-weight:500;" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:20px;color:#060202;font-family:Lato;font-weight:500;" href="#about">ABOUT</a>
-        </li>
-        
-    </ul>
-    <ul class="navbar-nav navbar-right">
-        <li class="nav-item navbar-right">
-          <a class="nav-link" style="font-size:20px;color:#060202;font-family:Lato;font-weight:500;" href="#contact">CONTACT</a>
-        </li>
-    </ul>
-  </div>
-</nav>
-<div class="biobackgroundimg" style="background-image:url('wooden_desk.jpg');background-repeat:no-repeat;background-position: left;background-size:100% 100%;background-attachment:fixed;">
-<div class="row" style="background-color:rgba(0,0,0,0.4);overflow-x:hidden;margin-bottom:0;border-radius:0px;height:inherit;margin:0;">
-    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 biobackgroundimgtwo">
-        <h1 style="color:white;font-family: Lato;padding-top:50px;font-size:8vw;" class="text-center text-hello">HELLO</h1>
-        <h1 style="color:white;font-family: Lato;padding-top:5px;font-size:4vw;" class="text-center text-iam">I am</h1>
-        <h1 style="color:white;font-family: Lato;padding-top:5px;font-size:8vw;" class="text-center text-name">KARTHIK E C</h1>
-        <hr style="background:white;width:40vw;height:0.1px;"/>
-        <h3 style="color:white;font-family: Lato;font-size:3vw;" class="text-center text-typewriter" id="writer"></h3><br /><br />
-    </div>
-</div>
-</div>
-
-
-<div class="row about" style="margin:0;">
-    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="background: #18BC9C;text-align: center;">
-        <div class="aboutme-heading" style="visibility:hidden;font-weight: 80; color:white; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid white;border-bottom: 2px solid white;font-size:35px;">ABOUT ME</span></div>
-        <div class="container aboutme-content" style="visibility:hidden;font-family: Lato;font-weight:70;font-size: 25px;color:white;text-align:justify;padding-bottom:20px;">
-        Hi there! I am Karthik E C, from Bengaluru,India, interested in mobile and web development. I am passionate about building excellent software that improves the lives of those around me and I love automating things.
-        </div>
-    </div>
-</div>
-
-<div class="skills" style="visibility:hidden;padding-bottom: 30px;margin:auto;">
-    <div class="container">
-        <div class="row" style="margin:0;">
-            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12" style="text-align: center;background:white;">
-                <div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">SKILLS</span></div>
-                 <div class="skill-item">
-                    <div class="skill-title">PYTHON</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-python"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">PHP</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-php"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">HTML</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-html"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">JavaScript</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-javascript"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">C</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-c"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">C++</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-cplusplus"></div>
-                    </div>
-                </div>
-                <br />
-                <div class="skill-item">
-                    <div class="skill-title">JAVA</div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success progress-bar-skill-java"></div>
-                    </div>
-                </div>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                LOGO
             </div>
-        </div>
-    </div>
-</div>
-<div class="android-apps">
-    <div style="font-weight: 80; color:black; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="border-top: 2px solid black;border-bottom: 2px solid black;font-size:35px;">MY ANDROID APPS</span></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-xs-6 col-sm-6 col-md-6">
-                <div class="app-logo"><img style="margin:auto;display:block;" src="statussaver_app_icon.png" width="150" height="150"/></div>
-                <div class="app-title">Status Saver</div>
-                <div class="app-description">App allows you to download the status updates posted by your friends in WhatsApp</div>
-                <div class="app-playstorelink"><a href='https://play.google.com/store/apps/details?id=app.statusdownloader.kart&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style="margin:auto;display:block;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="250" height="100"/></a></div>
-            </div>
-            <div class="col-lg-6 col-xs-6 col-sm-6 col-md-6">
-                <div class="app-logo"><img style="margin:auto;display:block;" src="notemaker_app_icon.png" width="150" height="150"/></div>
-                <div class="app-title">NoteMaker</div>
-                <div class="app-description">A simple application that allows you to take quick notes</div>
-                <div class="app-playstorelink"><a href='https://play.google.com/store/apps/details?id=app.easynotes.notes&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style="margin:auto;display:block;" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="250" height="100"/></a></div>
-            </div>
-        </div>
-    </div>
-   
-</div>
-<div class="container-fluid">
-    <div style="font-weight: 500; color:#FE0101; text-align:center;font-family: Lato;padding-top:20px;padding-bottom:20px;"><span style="font-size:35px;">MEET MY CHATBOT </span></div>
-    <div class="row">
-        <div class="col-sm-12 col-md-5">
-            <img class="rounded-circle" src="chatbot.jpg" style="padding-bottom: 20px;"/>
-        </div>
-        <div class="col-sm-12 col-md-7" style="font-size:25px;font-weight: 500;font-family:Lato;">
-            Made a chat bot by using Dialogflow API and integrated it with Telegram bot API. Features:- 
-            <ul>
-                <li>Basic greetings</li>
-                <li>Can respond with a joke when requested</li>
-                <li>Solves basic mathematical equations</li>
-                <li>Can send information about computer terms when asked</li>
-                <li>Fetches recent exam related circulars of Visvesvaraya Technological University</li>
+            <ul class="nav-links">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/">Resume</a>
+                    </li>
+                    <li>
+                        <a href="/">Contact</a>
+                    </li>
             </ul>
-            Search <a target="_blank" href="http://t.me/MisterChatBot"><kbd>@MisterChatBot</kbd></a> in Telegram app or use the below link to use my chat bot.
-            <div class="text-center"><a target="_blank" href="https://bot.dialogflow.com/31ec6ccc-63c8-4609-b2f8-adf0d4dba4ab" style="margin-top:20px;margin-bottom:20px;padding:15px;" class="btn btn-primary">INTERACT WITH MY BOT HERE</a></div>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <div class="about">
+            <div class="intro">
+                <h1>I'm Karthik E C</h1>
+                <p>A self-taught Full Stack developer, Software Engineer.</p>
+                <p>I love building things that can ease day to day activities</p>
+            </div>
+            <div class="photo">
+                <img src="photos/profile_pic.png">
+            </div>
+        </div> 
+        <div class="skills">
+            <h1>Skills</h1>
+            <div class="skills-list">
+                <div>
+                    <img src="logos/javascript.svg"/>
+                    <h3>JavaScript</h3>
+                </div>
+                <div>
+                    <img src="logos/react.svg"/>
+                    <h3>React</h3>
+                </div>
+                <div>
+                    <img src="logos/html.svg"/>
+                    <h3>HTML</h3>
+                </div>
+                <div>
+                    <img src="logos/css.svg"/>
+                    <h3>CSS</h3>
+                </div>
+                <div>
+                    <img src="logos/redux.svg"/>
+                    <h3>Redux</h3>
+                </div>
+                <div>
+                    <img src="logos/python.svg"/>
+                    <h3>Python</h3>
+                </div>
+                <div>
+                    <img src="logos/mongodb.svg"/>
+                    <h3>Mongodb</h3>
+                </div>
+                <div>
+                    <img src="logos/mysql.svg"/>
+                    <h3>MySQL</h3>
+                </div>
+
+            </div>
         </div>
-    </div>
-</div>
-<!--<div class="mywork">
-    <div class="row" style="background-color: rgba(0,0,0,0.4);margin:0;">
-        See my Work
-    </div>
-</div>-->
-<div class="jumbotron" style="background:#181A1A;padding-left:70px;margin-bottom:0;border-radius:0;" id="contact">
-    <h1 class="beintouch" style="color: white;font-family:Lato;font-size:45px;">Find me here!</h1>
-     <a target="_blank" href="http://facebook.com/eckarthikec"><img class="socicons" src="socicons/facebook.png" alt="Facebook"/></a>
-     <a target="_blank" href="http://twitter.com/eckarthik"><img class="socicons" src="socicons/twitter.png" alt="Twitter"/></a>
-     <a target="_blank" href="https://www.linkedin.com/in/karthik-e-c-0207476a/"><img class="socicons" src="socicons/linkedin.png" alt="LinkedIn"/></a>
-     <a target="_blank" href="https://www.github.com/eckarthik"><img class="socicons" src="https://png.icons8.com/windows/100/ffffff/github.png" alt="Github"/></a>
-</div>
-<div class="footer" >
-    <p align="right" style="color:white;padding-right:40px;margin-bottom:0;">Google Play and the Google Play logo are trademarks of Google LLC.</p>
-</div>
-</body>
+        <div class="projects">
+            <h1>PROJECTS</h1>
+            <div class="projects-list">
+                <div class="project">
+                    <div class="project-name">
+                        <p>Cryptocurrency Price Charts</p>
+                        <a target="_blank" href="https://eckarthik-crypto-price-chart.netlify.app/"><button class="visit-button">Visit</button></a>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/project-screenshots/crypto_price_charts.png"/>
+                    </div>
+                    <div class="project-info">
+                        <p>Shows the price charts for popular cryptocurrencies for the past 24 hours</p>
+                        <div class="tags">
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        <p>Instagram Downloader</p>
+                        <a target="_blank" href="https://eckarthik-instadl.netlify.app/"><button class="visit-button">Visit</button></a>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/project-screenshots/instagram_downloader.png"/>
+                    </div>
+                    <div class="project-info">
+                        <p>Allows you to download the profile picture, posts and videos from Instagram public accounts</p>
+                        <div class="tags">
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        <p>Weather Man</p>
+                        <a target="_blank" href="https://eckarthik-instadl.netlify.app/"><button class="visit-button">Visit</button></a>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/project-screenshots/react_weather_app.png"/>
+                    </div>
+                    <div class="project-info">
+                        <p>Allows you to search the weather for your current city and shows weather for next 5 days</p>
+                        <div class="tags">
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        <p>PyWebCrawler</p>
+                        <a target="_blank" href="https://github.com/eckarthik/PyWebCrawler"><button class="visit-button">Visit</button></a>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/project-screenshots/pywebcrawler.png"/>
+                    </div>
+                    <div class="project-info">
+                        <p>A Python package with features to crawl a given website and collect data</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        <p>Chatbot</p>
+                        <a target="_blank" href="https://github.com/eckarthik/TelegramChatBot"><button class="visit-button">Visit</button></a>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/project-screenshots/chatbot.png"/>
+                    </div>
+                    <div class="project-info">
+                        <p>A chatbot that tries to answer your questions, tells jokes and solves mathematical equations</p>
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">DialogFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-section">
+            <div class="contact-details">
+                <h1>Find me here!</h1>
+                <div class="contact-icons">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/eckarthikec"><img class="social-media-icon" src="assets/social-media-icons/facebook.png"/></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/karthik-e-c-0207476a/"><img class="social-media-icon" src="assets/social-media-icons/linkedin.png"/></a>
+                        </li>
+                        <li>
+                            <a href="http://github.com/eckarthik"><img class="social-media-icon" src="assets/social-media-icons/github.png"/></a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com/eckarthik"><img class="social-media-icon" src="assets/social-media-icons/instagram.png"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Made by Karthik</div>
+        <script src="script.js"/>
+    </body>
 </html>
