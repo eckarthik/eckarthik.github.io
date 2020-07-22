@@ -14,6 +14,11 @@ const navSlide = () => {
         })
     });
 
+    window.addEventListener("scroll", () => {
+        console.log("Scroll event")
+        nav.classList = "nav-links"
+    })
+
     
 }
 

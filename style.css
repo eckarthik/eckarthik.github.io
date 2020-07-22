@@ -308,10 +308,11 @@ nav {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 100;
+        color:black;
     }
 
     .nav-links li {
-        opacity: 0;
+        opacity: 1;
     }
 
     .burger {
